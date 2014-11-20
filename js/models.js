@@ -1,6 +1,11 @@
- // Basic Model
- var GreetingModel = Backbone.Model.extend({});
- var greeting = new GreetingModel({
- 	name : 'Jaws',
- 	greeting : 'I\'m Hungry'
- }) ;
+// Basic Model
+var StatesModel = Backbone.Model.extend({});
+var StatesCollection = Backbone.Collection.extend({
+	model : StatesModel,
+	url : './data/states.json',
+	parse : function (resp) {
+		return resp;
+	}
+});
+var states = new StatesCollection();
+states.fetch();

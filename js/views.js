@@ -1,15 +1,13 @@
-var GreetingView = Backbone.View.extend({
+/*
+var StatesView = Backbone.View.extend({
 	events : {
-		"click h2" : "sayGreeting"
 	},
-	template : _.template("<h2>Movie Name: </h2> <%= name %>"),
+	template : _.template(""),
 	render : function () {
 		this.$el.html(this.template(this.model.toJSON()));
 		return this;
-	},
-	sayGreeting : function () {
-		alert(this.model.get('greeting'));
 	}
 });
 
-var newGreeting = new GreetingView({model : greeting});
+var listView = new StatesView({model : states});
+*/

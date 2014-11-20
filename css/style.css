@@ -1,0 +1,35 @@
+#app ul {
+	display : inline;
+	list-style-type : none;
+	padding : 0;
+	color : #ffffff;
+}
+
+#app li {
+	float : left;
+	margin : 3px;
+	padding: 3px;
+	border-radius: 3px;
+	background : #8C1818;
+	cursor : pointer;
+}
+
+#app li:first-child {
+	margin-left : 0;
+}
+
+#imageView {
+	position : absolute;
+	top : 0;
+	left : 0;
+	width : 100%;
+	height : 100%;
+	overflow : hidden;
+	z-index : -99;
+};
+
+#imageView img {
+	height : 100%;
+	width : 100%;
+	margin : auto;
+}

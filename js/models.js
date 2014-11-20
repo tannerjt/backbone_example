@@ -13,5 +13,4 @@ var StatesCollection = Backbone.Collection.extend({
 	}
 });
 
-var states = new StatesCollection();
  

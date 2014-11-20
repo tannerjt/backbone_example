@@ -1,13 +1,25 @@
-/*
 var StatesView = Backbone.View.extend({
+	tagName : "ul",
 	events : {
+		"click li" : "showStateImage"
 	},
-	template : _.template(""),
+	initialize : function () {
+		// when collection is reset, rerender the view
+		// this will fix async issues
+		this.collection.on('reset', this.render, this);
+	},
+	showStateImage : function (evt) {
+		alert('click');
+	},
+	template : _.template("<li><%= name %></li>"),
 	render : function () {
-		this.$el.html(this.template(this.model.toJSON()));
+		var content = "";
+		_.each(this.collection.models, function (state) {
+			content += this.template(state.toJSON());
+		}, this);
+		this.$el.html(content);
 		return this;
 	}
 });
 
-var listView = new StatesView({model : states});
-*/
+var listView = new StatesView({ collection : states });
